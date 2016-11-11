@@ -6,3 +6,6 @@ Resources:
         AccessControl: PublicRead
         WebsiteConfiguration:
           IndexDocument: index.html
+Outputs:
+  WebsiteBucket:
+    Value: !Ref WebsiteBucket
