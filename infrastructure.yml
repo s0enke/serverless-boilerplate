@@ -1,11 +1,12 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Resources:
-    WebsiteBucket:
-      Type: AWS::S3::Bucket
-      Properties:
-        AccessControl: PublicRead
-        WebsiteConfiguration:
-          IndexDocument: index.html
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+
 Outputs:
   WebsiteBucket:
     Value: !Ref WebsiteBucket
