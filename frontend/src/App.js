@@ -11,7 +11,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log(process.env);
-    fetch(process.env.REACT_APP_API_ENDPOINT).then(
+    fetch(process.env.REACT_APP_API_ENDPOINT + '/hello').then(
       function(data) {
         this.setState({data: data});
       }.bind(this)
