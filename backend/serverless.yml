@@ -9,6 +9,6 @@ functions:
     handler: handler.hello
     events:
       - http:
-          path: /
+          path: hello
           method: GET
           cors: true

@@ -3,6 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {data: ''};
+  }
+
+  componentDidMount() {
+    console.log(process.env);
+    fetch(process.env.REACT_APP_API_ENDPOINT).then(
+      function(data) {
+        this.setState({data: data});
+      }.bind(this)
+    );
+  }
   render() {
     return (
       <div className="App">
@@ -10,9 +24,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          Hallo!
-        </p>
+        <pre>{JSON.stringify(this.state.data, null, 2)}</pre>
       </div>
     );
   }
