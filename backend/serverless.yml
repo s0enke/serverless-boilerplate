@@ -8,4 +8,7 @@ functions:
   hello:
     handler: handler.hello
     events:
-      - http: GET /
+      - http:
+          path: /
+          method: GET
+          cors: true
