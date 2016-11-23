@@ -10,12 +10,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(process.env);
-    fetch(process.env.REACT_APP_API_ENDPOINT + '/hello').then(
-      function(data) {
-        this.setState({data: data});
-      }.bind(this)
-    );
+    fetch(process.env.REACT_APP_API_ENDPOINT + '/hello').then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      this.setState({data: json});
+    }.bind(this));
   }
   render() {
     return (
@@ -24,7 +23,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <pre>{JSON.stringify(this.state.data, null, 2)}</pre>
+        <pre className="App-intro">{JSON.stringify(this.state.data, null, 2)}</pre>
       </div>
     );
   }
