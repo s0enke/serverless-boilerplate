@@ -15,6 +15,7 @@ functions:
 
 resources:
   Outputs:
+    #  this feels like a hack: see https://github.com/s0enke/cloudformation-templates/issues/2
     ServiceEndpoint:
       Export:
         Name: serverless-boilerplate-${self:provider.stage}-ServiceEndpoint
