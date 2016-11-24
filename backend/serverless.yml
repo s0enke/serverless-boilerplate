@@ -12,3 +12,8 @@ functions:
           path: hello
           method: GET
           cors: true
+
+resources:
+  Outputs:
+    ServiceEndpoint:
+      Export: ${service}-${stage}-ServiceEndpoint
