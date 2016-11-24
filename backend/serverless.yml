@@ -16,4 +16,5 @@ functions:
 resources:
   Outputs:
     ServiceEndpoint:
-      Export: serverless-boilerplate-${self:provider.stage}-ServiceEndpoint
+      Export:
+        Name: serverless-boilerplate-${self:provider.stage}-ServiceEndpoint
