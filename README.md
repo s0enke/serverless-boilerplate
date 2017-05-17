@@ -11,6 +11,8 @@ You can try it out yourself by starting a AWS CloudFormation stack (make sure to
  
 [![Launch Stack](https://github.com/s0enke/cloudformation-templates/blob/master/cloudformation-launch-stack.png?raw=true)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=serverless-app-awsadvent-sample&templateURL=https://s3.amazonaws.com/ruempler-cloudformation-templates-prod/pipeline-serverless-backend-npm-frontend.yml)
 
+[Link to CloudFormation Template](https://s3.amazonaws.com/ruempler-cloudformation-templates-prod/pipeline-serverless-backend-npm-frontend.yml)
+
 ## License
 
 MIT
